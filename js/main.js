@@ -46,7 +46,7 @@ if (welcome == 'b'){
 } else if (welcome == 'c') {
   var imperial_metric = prompt("Great! Do you prefer Imperial or Metric values? (please type 'imperial' or 'metric')");
 
-  if (imperial_metric = 'metric') {
+  if (imperial_metric === 'metric') {
     var height_metric = prompt("Please enter you height in meters! (Ex. 1.65)");
     var weight_metric = prompt("And now your weight in kilograms (Ex. 63). Come on, don't be shy!");
     var result_metric = weight_metric / Math.pow(height_metric, 2);
@@ -62,8 +62,7 @@ if (welcome == 'b'){
     } else {
       alert("I would be very careful and try contact a doctor...!");
     };
-  };
-  if (imperial_metric = 'imperial') {
+  } else if (imperial_metric === 'imperial') {
     var height_imperial = prompt("Please enter you height in inches! (Ex. 63.77)");
     var weight_imperial = prompt("And now you weight in pounds (Ex. 99). Come on, don't be shy!");
     var result_imperial = weight_imperial / Math.pow(height_imperial, 2) * 703;
@@ -80,8 +79,7 @@ if (welcome == 'b'){
       alert("I would be very careful and try contact a doctor...!");
     };
   };
-}
-else if (welcome === 'd') {
+} else if (welcome === 'd') {
   var distance = prompt("How long is your journey? (please enter your value in miles)");
   var mpg = prompt("What's the comsuption of your car? (in mpg)");
   var costpg = prompt("How much is one full fuel tank? (Ex. 50.43)");
