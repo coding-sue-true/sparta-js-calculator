@@ -48,6 +48,10 @@ Note: For every 1 MPH over 60 MPH, reduce the the MPG by 2 MPG (i.e. a car that 
 - Build an index.html page and style it
 
 ## Final Balance of the task
+
+### Work in Progress
+- Finish the __super super__ bonus task
+
 ### Most Difficult
 - Initial 'snow ball' of code
 - Didn't loose the track of 'if', 'else if' and 'else' statements;

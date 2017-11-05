@@ -1,13 +1,12 @@
-var welcome = prompt("Hi, Welcome! We have different calculators waiting for you! Type 'a' for Advanced operations, 'b' for Basic operations, 'c' if you want to know your BMI and 'd' in case you would like to know the estimated cost for a journey you're planning.");
+var welcome = prompt("Hi, Welcome!\nWe have different calculators waiting for you!\nType 'a' for Advanced operations,\n'b' for Basic operations,\n'c' if you want to know your BMI ");
 
+// TRIP CALCULATOR not finished yet "and type 'd' in case you would like to know the estimated cost and duration for a journey you're planning."
 
 // ------------------ BASIC CALCULATOR ----------------------
-
-if (welcome == 'b'){
+if (welcome === 'b'){
   var first_Number = prompt("Alright, let's start! Type a number...");
   var operation_basic = prompt("And now choose an operation (+, -, / or *)");
   var second_number = prompt("Almost there! Just type one more number!");
-
   if (operation_basic === '-') {
     var result = parseFloat(first_Number) - parseFloat(second_number);
     alert(first_Number + ' - ' + second_number + ' = ' + result);
@@ -24,10 +23,8 @@ if (welcome == 'b'){
     var result = parseFloat(first_Number) * parseFloat(second_number);
     alert(first_Number + ' * ' + second_number + ' = ' + result);
   }
-
-  // ------------------ ADVANCED CALCULATOR ----------------------
-
-} else if (welcome == 'a') {
+// ------------------ ADVANCED CALCULATOR ----------------------
+} else if (welcome === 'a') {
   var first_Number = prompt("Alright, let's start! Type a number...");
   var operation_advanced = prompt ("And now choose an operation (type 'power' or 'square root')");
   var second_number = prompt("Almost there! Just type one more number!");
@@ -40,12 +37,9 @@ if (welcome == 'b'){
     var result = Math.sqrt(parseFloat(first_Number), parseFloat(second_number));
     alert(first_Number + ' √ ' + second_number + ' = ' + result);
   }
-
-  // ------------------ BMI CALCULATOR ----------------------
-
+// ------------------ BMI CALCULATOR ----------------------
 } else if (welcome == 'c') {
   var imperial_metric = prompt("Great! Do you prefer Imperial or Metric values? (please type 'imperial' or 'metric')");
-
   if (imperial_metric === 'metric') {
     var height_metric = prompt("Please enter you height in meters! (Ex. 1.65)");
     var weight_metric = prompt("And now your weight in kilograms (Ex. 63). Come on, don't be shy!");
@@ -61,7 +55,8 @@ if (welcome == 'b'){
       alert("I bet there's a gym very close to you!");
     } else {
       alert("I would be very careful and try contact a doctor...!");
-    };
+    }
+
   } else if (imperial_metric === 'imperial') {
     var height_imperial = prompt("Please enter you height in inches! (Ex. 63.77)");
     var weight_imperial = prompt("And now you weight in pounds (Ex. 99). Come on, don't be shy!");
@@ -77,15 +72,17 @@ if (welcome == 'b'){
       alert("I bet there's a gym very close to you!");
     } else {
       alert("I would be very careful and try contact a doctor...!");
-    };
-  };
-} else if (welcome === 'd') {
-  var distance = prompt("How long is your journey? (please enter your value in miles)");
-  var mpg = prompt("What's the comsuption of your car? (in mpg)");
-  var costpg = prompt("How much is one full fuel tank? (Ex. 50.43)");
-  var speed = prompt("What's your average speed? (Ex. 55)");
-  var time_result = distance / speed;
-  var final_time = parseFloat(time_result).toFixed(2);
-  var total_cost = 0;
-  alert('Your journey will take ' + final_time + 'hours and cost £' + total_cost + '.');
+    }
+  }
 }
+// ------------------------------- Trip Calculator ----------------------
+//   else if (welcome === 'd') {
+//   var distance = prompt("How long is your journey? (please enter your value in miles)");
+//   var mpg = prompt("What's the comsuption of your car? (in mpg)");
+//   var costpg = prompt("How much is one full fuel tank? (Ex. 50.43)");
+//   var speed = prompt("What's your average speed? (Ex. 55)");
+//   var time_result = distance / speed;
+//   var final_time = parseFloat(time_result).toFixed(2);
+//   var total_cost = 0;
+//   alert('Your journey will take ' + final_time + 'hours and cost £' + total_cost + '.');
+// }
